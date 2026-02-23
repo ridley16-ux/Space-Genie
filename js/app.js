@@ -296,13 +296,13 @@ async function mountFooter() {
   if (!mount) return;
   try {
     if (!location.protocol.startsWith('http')) {
-      mount.innerHTML = '<footer class="app-footer">Galaxy Harvest v1.1.0</footer>';
+      mount.innerHTML = '<footer class="app-footer">Galaxy Harvest v1.2.0</footer>';
       return;
     }
     const html = await fetch('./assets/footer.html').then((r) => r.text());
     mount.innerHTML = html;
   } catch {
-    mount.innerHTML = '<footer class="app-footer">Galaxy Harvest v1.1.0</footer>';
+    mount.innerHTML = '<footer class="app-footer">Galaxy Harvest v1.2.0</footer>';
   }
 }
 

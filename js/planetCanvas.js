@@ -2,6 +2,7 @@ import { hexDistance } from './gen.js';
 
 export function createPlanetRenderer(canvas) {
   const ctx = canvas.getContext('2d');
+  ctx.imageSmoothingEnabled = false;
   const state = { rot: 0, hitRegions: [] };
 
   function drawHex(x, y, size) {
@@ -32,6 +33,12 @@ export function createPlanetRenderer(canvas) {
     state.rot += 0.004;
 
     ctx.clearRect(0, 0, width, height);
+    for (let i = 0; i < 36; i++) {
+      const sx = (i * 37 + Math.floor(state.rot * 500)) % width;
+      const sy = (i * 71 + Math.floor(state.rot * 300)) % height;
+      ctx.fillStyle = i % 5 === 0 ? '#7ef6ff' : '#1f4262';
+      ctx.fillRect(sx, sy, 2, 2);
+    }
     ctx.save();
     ctx.translate(cx, cy);
 
@@ -71,7 +78,7 @@ export function createPlanetRenderer(canvas) {
       ctx.fillStyle = region.harvested ? 'rgba(63,226,132,0.45)' : 'rgba(18,33,56,0.35)';
       ctx.fill();
       ctx.lineWidth = region.id === selectedRegionId ? 2.6 : 1;
-      ctx.strokeStyle = region.id === selectedRegionId ? '#8ad5ff' : `rgba(120,170,220,${0.35 * p.alpha})`;
+      ctx.strokeStyle = region.id === selectedRegionId ? '#95fdff' : `rgba(120,170,220,${0.35 * p.alpha})`;
       ctx.stroke();
 
       if (region.hasArtefactUnknown && !region.artefactRevealed) {
