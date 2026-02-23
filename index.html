@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-colour" content="#081321" />
+  <title>Galaxy Harvest</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="top-bar">
+      <h1>Galaxy Harvest</h1>
+      <div class="stats">
+        <button id="fuelBtn" class="chip">⛽ <span id="fuelText">0/0</span></button>
+        <button id="coinBtn" class="chip">🪙 <span id="coinText">0</span></button>
+        <button data-module="scanner" class="chip module-btn">📡</button>
+        <button data-module="shield" class="chip module-btn">🛡️</button>
+        <button data-module="laser" class="chip module-btn">🔧</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="mainView" class="view active">
+        <canvas id="planetCanvas" width="720" height="720" aria-label="Planet view"></canvas>
+        <div class="region-panel" id="regionPanel"></div>
+        <div class="action-row">
+          <button id="harvestBtn">Harvest</button>
+          <button id="travelBtn">Travel</button>
+          <button id="unlockArtefactBtn">Unlock Artefact</button>
+        </div>
+      </section>
+
+      <section id="galaxyView" class="view"></section>
+      <section id="journalView" class="view"></section>
+      <section id="collectionView" class="view"></section>
+    </main>
+    <div id="footerMount"></div>
+
+    <nav class="bottom-nav">
+      <button data-view="mainView">Planet</button>
+      <button data-view="galaxyView">Galaxy</button>
+      <button data-view="journalView">Journal</button>
+      <button data-view="collectionView">Collections</button>
+      <button id="marketOpenBtn">Market</button>
+      <button id="helpBtn">How to Play</button>
+    </nav>
+  </div>
+
+  <div id="modal" class="modal hidden"><div id="modalContent" class="modal-content"></div></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
