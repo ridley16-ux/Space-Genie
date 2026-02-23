@@ -1,0 +1,31 @@
+{
+  "categories": [
+    {
+      "id": "metal",
+      "name": "Metal",
+      "tiers": [
+        { "minGalaxy": 1, "label": "Scrap Iron", "baseYield": 8, "baseValue": 4, "waitSeconds": 1 },
+        { "minGalaxy": 15, "label": "Dense Alloy", "baseYield": 6, "baseValue": 8, "waitSeconds": 2 },
+        { "minGalaxy": 35, "label": "Voidsteel", "baseYield": 4, "baseValue": 14, "waitSeconds": 3 }
+      ]
+    },
+    {
+      "id": "energy",
+      "name": "Energy",
+      "tiers": [
+        { "minGalaxy": 1, "label": "Ion Cells", "baseYield": 7, "baseValue": 5, "waitSeconds": 1 },
+        { "minGalaxy": 15, "label": "Prism Cores", "baseYield": 5, "baseValue": 10, "waitSeconds": 2 },
+        { "minGalaxy": 35, "label": "Singularity Charge", "baseYield": 3, "baseValue": 18, "waitSeconds": 3 }
+      ]
+    },
+    {
+      "id": "organic",
+      "name": "Organic",
+      "tiers": [
+        { "minGalaxy": 1, "label": "Microflora", "baseYield": 9, "baseValue": 3, "waitSeconds": 1 },
+        { "minGalaxy": 15, "label": "Bio-Weave", "baseYield": 6, "baseValue": 7, "waitSeconds": 2 },
+        { "minGalaxy": 35, "label": "Proto-Life Gel", "baseYield": 4, "baseValue": 13, "waitSeconds": 3 }
+      ]
+    }
+  ]
+}

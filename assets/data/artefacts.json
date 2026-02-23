@@ -1,0 +1,25 @@
+{
+  "categories": [
+    {
+      "id": "DNA",
+      "rarity": "common",
+      "setBonusXp": 40,
+      "setSellBonus": 1.35,
+      "items": ["Helix Fragment", "Genome Coil", "Spiral Marker", "Gene Thread", "Chromo Bead"]
+    },
+    {
+      "id": "Fossil",
+      "rarity": "rare",
+      "setBonusXp": 90,
+      "setSellBonus": 1.6,
+      "items": ["Bone Lattice", "Amber Imprint", "Shell Archive", "Stone Rib"]
+    },
+    {
+      "id": "Life",
+      "rarity": "ultra",
+      "setBonusXp": 180,
+      "setSellBonus": 2.1,
+      "items": ["Living Spore", "Echo Seed", "Prime Cell"]
+    }
+  ]
+}
